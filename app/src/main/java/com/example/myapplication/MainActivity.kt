@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         loops()
         nullSafety()
         funciones()
+        clases()
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -263,6 +264,22 @@ class MainActivity : AppCompatActivity() {
     fun suma2numeros(firstNumber: Int, secondNumber: Int) : Int{
         val sum = firstNumber + secondNumber
         return sum
+    }
+
+    fun clases(){
+        //Construcción e implementación de clases
+        val Aldo  = Programmer("Aldo",21,arrayOf(Programmer.Language.C,Programmer.Language.Kotlin))
+        println(Aldo.name)
+        Aldo.age = 20
+        println(Aldo.age)
+
+        val Sara =  Programmer("Sara",25,arrayOf(Programmer.Language.Java,Programmer.Language.Python),
+            arrayOf(Aldo))
+
+        Aldo.code()
+        Sara.code()
+
+        println("${Sara.friends?.first()?.name} es amigo de ${Sara.name}")
     }
 
     ///////////////////////////////////////////////////////////////////////
